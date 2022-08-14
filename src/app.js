@@ -35,13 +35,13 @@ const App = () => {
 	const updateTodo = (id) => {
 		fetch("");
 	};
-	console.log("keys", process.env);
+	console.log("kekasndkjasnndkjys", process.env);
 	return (
 		<>
 			<div>
 				<div className="flex-row">
-					<div>all todos are:-</div>
-					<button className="p-2 cursor-pointer bg-success-400">Create</button>
+					<div className="border-2 border-red-700">all todos are:-</div>
+					<button className="p-2 cursor-pointer bg-success">Create</button>
 				</div>
 				<div>
 					{all_todos.map((todo, i) => {
