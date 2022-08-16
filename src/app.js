@@ -6,17 +6,26 @@ const App = () => {
 
 	useEffect(() => {
 		getAllTodos().then();
-
+		getRoute();
 		return () => {};
 	}, []);
 
-	console.log("alltodos", all_todos);
+	const getRoute = () => {
+		console.log("get routes");
+		return fetch("http://localhost:5000/todos/xyz")
+			.then((res) => (res.ok ? res.json() : Promise.reject(res)))
+			.then((data) => console.log(data))
+			.catch((err) => err.text().then((text) => toast.error(text)));
+		// .catch((err) => console.log(err))
+	};
+
+	// console.log("alltodos", all_todos);
 
 	const getAllTodos = () => {
 		return fetch("http://localhost:5000/todos")
-			.then((res) => (res.ok ? res.json() : Promise.reject()))
+			.then((res) => (res.ok ? res.json() : Promise.reject(res)))
 			.then((data) => setAllTodos(data.todo))
-			.catch(console.log);
+			.catch((err) => console.log("error", err));
 	};
 
 	const deleteTodo = (id) => {
@@ -35,7 +44,7 @@ const App = () => {
 	const updateTodo = (id) => {
 		fetch("");
 	};
-	console.log("kekasndkjasnndkjys", process.env);
+
 	return (
 		<>
 			<div>
