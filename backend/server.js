@@ -4,10 +4,10 @@ import cors from "cors";
 import "dotenv/config";
 import cookieParser from "cookie-parser";
 
-import connectDb from "./config/db.js";
-import todo_routes from "./routes/todo-routes.js";
-import user_routes from "./routes/user-routes.js";
-import errorHandlers from "./middleware/error-handler-middleware.js";
+import connectDb from "~/config/db";
+import todo_routes from "~/routes/todo-routes.js";
+import user_routes from "~/routes/user-routes.js";
+import errorHandlers from "~/middleware/error-handler-middleware.js";
 
 const app = express();
 
