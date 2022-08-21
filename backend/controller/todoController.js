@@ -46,4 +46,8 @@ export const deleteTodoById = async (req, res) => {
 	}
 };
 
+<<<<<<< HEAD
 "chaaged in todo controlller"
+=======
+"file 2 changes"
+>>>>>>> parent of 660dffb (Revert "2 file is changed")
