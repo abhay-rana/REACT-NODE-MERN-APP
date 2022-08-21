@@ -21,5 +21,3 @@ const todosSchema = new mongoose.Schema(
 );
 
 export const Todo = mongoose.model("Todos", todosSchema);
-
-"file 7 chnaged"
