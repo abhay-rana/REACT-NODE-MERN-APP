@@ -1,5 +1,5 @@
-import "dotenv/config";
 import mongoose from "mongoose";
+import "dotenv/config";
 
 const connectDb = () => {
 	mongoose
@@ -13,5 +13,3 @@ const connectDb = () => {
 };
 
 export default connectDb;
-
-("hello this is abhay");
