@@ -45,5 +45,3 @@ export const deleteTodoById = async (req, res) => {
 		console.log(error);
 	}
 };
-
-"file 2 changes"

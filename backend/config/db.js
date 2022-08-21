@@ -13,4 +13,3 @@ const connectDb = () => {
 };
 
 export default connectDb;
-"file 1 changes";
