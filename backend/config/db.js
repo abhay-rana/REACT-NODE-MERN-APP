@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import "dotenv/config";
 
 const connectDb = () => {
-	mongoose
+	return mongoose
 		.connect(process.env.DATABSE_URL)
 		.then((con) => {
 			console.log("Database connected");

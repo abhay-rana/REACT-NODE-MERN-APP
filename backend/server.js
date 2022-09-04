@@ -18,16 +18,16 @@ app.use(
 	cors({
 		origin: "http://localhost:3000",
 	})
-); //only this domain can only make requests
+); //only this domain can only make requests white listings the ip-addresses
 
-app.use(bodyParser.json()); //parse the object coming in the body of the post request
-app.use(cookieParser());
+app.use(bodyParser.json()); //parse the string coming in the body of the post request to the object 
+app.use(cookieParser()); 
 
 //mounting of routes
 app.use("/", todo_routes);
 app.use("/", user_routes);
 
-//server is listening at root route
+//server is listening at root route as a getRequest
 app.get("/", (req, res) => {
 	res.send("Server is Listening successfully");
 });
