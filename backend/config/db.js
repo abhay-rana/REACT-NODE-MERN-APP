@@ -11,5 +11,5 @@ const connectDb = () => {
 			console.log("error", error);
 		});
 };
-
+//returns the promise for the database connection
 export default connectDb;

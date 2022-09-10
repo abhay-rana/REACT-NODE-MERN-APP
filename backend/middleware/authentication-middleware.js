@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 import "dotenv/config";
 
 //middleware for the authentication
+//is the particular user is logged in or not 
 
 const isAuthenticatedUser = (req, res, next) => {
 	const { jwt_token } = req.cookies;

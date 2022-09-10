@@ -1,3 +1,5 @@
+//types of error we get by saving the data in the mongodb
+
 const errorHandlers = (err, req, res, next) => {
 	let error = { ...err };
 	error.message = err.message;
