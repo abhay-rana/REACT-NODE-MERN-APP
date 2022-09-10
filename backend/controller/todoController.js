@@ -2,8 +2,11 @@ import { Todo } from "~/models/todoSchema";
 
 export const createTodo = async (req, res, next) => {
 	try {
-		Todo.create(req.body); //to find all the documents
+		Todo.create(req.body);
 		res.json({ message: "new todo has been created" });
+		// Todo.create(req.body,(err,data)=>{
+		// 	res.json(data);
+		// })
 	} catch (error) {
 		next(error); //next middleware in the queue
 	}

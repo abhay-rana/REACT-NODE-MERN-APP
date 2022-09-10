@@ -21,7 +21,7 @@ app.use(
 ); //only this domain can only make requests white listings the ip-addresses
 
 app.use(bodyParser.json()); //parse the string coming in the body of the post request to the object 
-app.use(cookieParser()); 
+app.use(cookieParser());  //parse the cookie in the request 
 
 //mounting of routes
 app.use("/", todo_routes);
