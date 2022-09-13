@@ -5,21 +5,18 @@ const App = () => {
 	const [all_todos, setAllTodos] = useState([]);
 
 	useEffect(() => {
-		getAllTodos().then();
+		getAllTodos()
 		getRoute();
 		return () => {};
 	}, []);
 
 	const getRoute = () => {
-		console.log("get routes");
-		return fetch("http://localhost:5000/todos/xyz")
+		//get the todo-detail by the id of that particular todo
+		return fetch("http://localhost:5000/todos/144654888")
 			.then((res) => (res.ok ? res.json() : Promise.reject(res)))
 			.then((data) => console.log(data))
 			.catch((err) => err.text().then((text) => toast.error(text)));
-		// .catch((err) => console.log(err))
 	};
-
-	// console.log("alltodos", all_todos);
 
 	const getAllTodos = () => {
 		return fetch("http://localhost:5000/todos")
