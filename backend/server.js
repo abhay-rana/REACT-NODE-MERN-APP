@@ -27,11 +27,6 @@ app.use(cookieParser());  //parse the cookie in the request
 app.use("/", todo_routes);
 app.use("/", user_routes);
 
-//server is listening at root route as a getRequest
-app.get("/", (req, res) => {
-	res.send("Server is Listening successfully");
-});
-
 //error handling of all unhandled routes
 app.use("*", (req, res) => {
 	res.status(404).json({
@@ -42,6 +37,11 @@ app.use("*", (req, res) => {
 
 //error handling by the schema a custom middleware
 app.use(errorHandlers);
+
+//server is listening at root route as a getRequest
+app.get("/", (req, res) => {
+	res.send("Server is Listening successfully");
+});
 
 app.listen(process.env.PORT, () => {
 	console.log("server is running at port", process.env.PORT);

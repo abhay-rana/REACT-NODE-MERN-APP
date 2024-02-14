@@ -23,7 +23,7 @@ export const getAlltodos = async (req, res, next) => {
 
 export const getTodoById = async (req, res, next) => {
 	try {
-		const todo = await Todo.findById(req.params.id); //to find all the documents
+		const todo = await Todo.findById(req.params.id); //to find the document by the id
 		res.json({ todo });
 	} catch (error) {
 		next(error);
